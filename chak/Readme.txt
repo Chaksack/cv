@@ -1,2 +1,1 @@
-Thanks for downloading this theme!
-
+Thanks for viewing my cv website 
