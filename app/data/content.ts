@@ -200,7 +200,7 @@ export const projects: ProjectCard[] = [
     category: 'Ecommerce',
     year: '2025',
     title: 'Ulee Home',
-    description: 'An experimental playground exploring the capabilities of generative AI.',
+    description: 'An ecommerce platform for scented candles and home fragrances.',
     tech: ['React', 'TypeScript', 'Next.js', 'AWS', 'Resend', 'Medusa', 'Tailwind CSS', 'ShipStation'],
     link: 'https://uleehome.com/'
   },
@@ -210,7 +210,7 @@ export const projects: ProjectCard[] = [
     year: '2025',
     title: 'Bible AI',
     description:
-      'Integrated the first-ever Voice AI into the Chat feature, leveraging OpenAI and Eleven Labs.',
+      'Platform that keeps the Bible at the centre - clean reading, thoughtful search, and interactive study tools that always points back to Scripture.',
     tech: ['Next.js', 'Tailwind CSS', 'Grok AI', 'TypeScript', 'SQL'],
     link: 'https://bibleai.com/'
   },
@@ -220,9 +220,9 @@ export const projects: ProjectCard[] = [
     year: '2024',
     title: 'Nada',
     description:
-      'Developed the Saved Cards feature driving over 223M+ in volume. Integrated 2FA into the flow.',
-    tech: ['Vue', 'Fintech'],
-    link: 'https://paystack.com/'
+      'A comprehensive static analysis tool for Go codebases that detects bugs, vulnerabilities, code smells, and provides quality metrics similar to SonarQube.',
+    tech: ['Go', 'Gofiber', 'Cli'],
+    link: 'https://nada-chi.vercel.app/'
   },
   {
     id: '04',
@@ -230,9 +230,20 @@ export const projects: ProjectCard[] = [
     year: '2024',
     title: 'Montessori World Connect',
     description:
-      'Led the Direct Debit UI project (first-ever direct debit in Nigeria) implementation closely with the processing team.',
-    tech: ['React', 'TypeScript', 'Remix'],
+      'Global platform created to bring together parents, Montessori professionals, schools, and training centers around a shared passion for Montessori education.',
+    tech: ['React', 'TypeScript', 'Next.js', 'AWS','Tailwind CSS', 'Stripe', 'Go', 'Gofiber'],
         link: 'https://montessoriworldconnect.com/'
+
+  },
+  {
+    id: '05',
+    category: 'Logistics',
+    year: '2024',
+    title: 'GoTruck',
+    description:
+      'A logistics management platform for real-time tracking and efficient fleet operations. Also helps customer order truck services seamlessly.',
+    tech: ['Vue', 'Nuxt', 'TypeScript', 'Go', 'Mapbox', 'PostgreSQL','Gofiber'],
+        link: 'https://logistics-one-khaki.vercel.app/'
 
   }
 ]
