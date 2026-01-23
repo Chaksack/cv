@@ -16,7 +16,12 @@ export default defineNuxtConfig({
     strict: true
   },
 
+  nitro: {
+    preset: (process.env.NITRO_PRESET as any) || 'github_pages'
+  },
+
   app: {
+    baseURL: process.env.NUXT_APP_BASE_URL || '/',
     head: {
       title: "Andrew Chakdahah - Technical Project Manager & DevSecOps Engineer",
       meta: [
