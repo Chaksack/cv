@@ -41,9 +41,17 @@
 import { useScrollUI } from '~/composables/useScrollUI'
 import { content } from '~/data/content'
 
+const route = useRoute()
+const router = useRouter()
+
 const { isScrolled, isVisible } = useScrollUI()
 
 const scrollTo = (id: string) => {
+  if (route.path !== '/') {
+    void router.push({ path: '/', hash: `#${id}` })
+    return
+  }
+
   const el = document.getElementById(id)
   el?.scrollIntoView({ behavior: 'smooth' })
 }

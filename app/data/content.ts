@@ -14,7 +14,8 @@ export const content = {
     { label: 'About', id: 'about' },
     { label: 'Experience', id: 'experience' },
     { label: 'Advisory', id: 'advisory' },
-    { label: 'Projects', id: 'projects' }
+    { label: 'Projects', id: 'projects' },
+    { label: 'Blog', id: 'blog' }
   ],
   navContact: 'Contact',
   about: {
@@ -29,7 +30,9 @@ export const content = {
       },
       {
         highlight1: 'As a seasoned DevSecOps Engineer and Technical Product Manager with expertise in cloud architecture, infrastructure automation, and DevSecOps solutions. I specialize in managing CI/CD pipelines, automating infrastructure with Terraform, and deploying Kubernetes clusters, while driving product lifecycle management, feature development, and roadmap planning. I bring a unique combination of technical acumen and strategic product oversight to deliver robust, scalable solutions aligned with business objectives and market needs ',
-        
+        middle: '',
+        highlight2: '',
+        end: ''
       }
     ]
   },
@@ -52,6 +55,13 @@ export const content = {
     headingTitle: 'Artifacts',
     intro:
       'Selected engineering projects. High-impact features, pioneer in region, and AI integrations.',
+    startLabel: 'Genesis',
+    endLabel: 'Apex'
+  },
+  blog: {
+    headingNumber: '05',
+    headingTitle: 'Blog',
+    intro: 'Writing on product delivery, DevSecOps, and building resilient systems.',
     startLabel: 'Genesis',
     endLabel: 'Apex'
   },
@@ -90,6 +100,18 @@ export type ProjectCard = {
   title: string
   description: string
   tech: string[]
+  link?: string
+}
+
+export type BlogPost = {
+  id: string
+  slug: string
+  category: string
+  date: string
+  title: string
+  excerpt: string
+  tags: string[]
+  body: string[]
   link?: string
 }
 
@@ -208,5 +230,50 @@ export const projects: ProjectCard[] = [
     tech: ['React', 'TypeScript', 'Remix'],
         link: 'https://montessoriworldconnect.com/'
 
+  }
+]
+
+export const blogPosts: BlogPost[] = [
+  {
+    id: '01',
+    slug: 'shipping-reliably-with-guardrails',
+    category: 'WRITING',
+    date: '2026',
+    title: 'Shipping reliably with CI/CD and guardrails',
+    excerpt: 'How I think about delivery systems that move fast without breaking trust.',
+    tags: ['CI/CD', 'DevSecOps', 'Delivery'],
+    body: [
+      'Reliability is not the opposite of speed. It is the foundation that lets speed compound.',
+      'I like to think in terms of guardrails: automated checks, repeatable pipelines, and clear rollback paths.',
+      'The goal is not to prevent change; it is to make change safe, observable, and reversible.'
+    ]
+  },
+  {
+    id: '02',
+    slug: 'infrastructure-as-product',
+    category: 'NOTES',
+    date: '2026',
+    title: 'Infrastructure as product',
+    excerpt: 'Treating platform work like product work: outcomes, feedback loops, and ownership.',
+    tags: ['Platform', 'Terraform', 'Kubernetes'],
+    body: [
+      'When infrastructure is treated like a product, it gets clarity: who it serves, what problem it solves, and how success is measured.',
+      'That means prioritizing developer experience, reducing toil, and building feedback loops into every release.',
+      'Ownership matters: a platform with no clear owner becomes a tax on every team.'
+    ]
+  },
+  {
+    id: '03',
+    slug: 'observability-that-engineers-use',
+    category: 'LEARNINGS',
+    date: '2025',
+    title: 'Observability that engineers actually use',
+    excerpt: 'A pragmatic approach to logs, metrics, traces, and dashboards that earn adoption.',
+    tags: ['Observability', 'Grafana', 'SRE'],
+    body: [
+      'Observability only works when it is easy to reach and easy to trust.',
+      'Start with a few golden signals, make dashboards actionable, and instrument the critical paths first.',
+      'The best dashboards answer: “What changed?” and “What do I do next?”'
+    ]
   }
 ]
