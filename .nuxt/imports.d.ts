@@ -34,3 +34,4 @@ export { useActiveSection } from '../app/composables/useActiveSection';
 export { useInView, InViewOptions } from '../app/composables/useInView';
 export { useReducedMotion } from '../app/composables/useReducedMotion';
 export { useScrollUI } from '../app/composables/useScrollUI';
+export { useNuxtDevTools } from '../node_modules/.pnpm/@nuxt+devtools@3.1.1_vite@7.3.1_jiti@2.6.1_lightningcss@1.30.2_terser@5.46.0_yaml@2.8.2__vue@3.5.27/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';

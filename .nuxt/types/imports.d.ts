@@ -115,6 +115,7 @@ declare global {
   const useModel: typeof import('vue').useModel
   const useNuxtApp: typeof import('../../node_modules/.pnpm/nuxt@4.2.2_@parcel+watcher@2.5.4_@vue+compiler-sfc@3.5.27_cac@6.7.14_db0@0.3.4_ioredis@_e5a458a055b23dfbbfed8a545dabf2aa/node_modules/nuxt/dist/app/nuxt').useNuxtApp
   const useNuxtData: typeof import('../../node_modules/.pnpm/nuxt@4.2.2_@parcel+watcher@2.5.4_@vue+compiler-sfc@3.5.27_cac@6.7.14_db0@0.3.4_ioredis@_e5a458a055b23dfbbfed8a545dabf2aa/node_modules/nuxt/dist/app/composables/asyncData').useNuxtData
+  const useNuxtDevTools: typeof import('../../node_modules/.pnpm/@nuxt+devtools@3.1.1_vite@7.3.1_jiti@2.6.1_lightningcss@1.30.2_terser@5.46.0_yaml@2.8.2__vue@3.5.27/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools').useNuxtDevTools
   const usePreviewMode: typeof import('../../node_modules/.pnpm/nuxt@4.2.2_@parcel+watcher@2.5.4_@vue+compiler-sfc@3.5.27_cac@6.7.14_db0@0.3.4_ioredis@_e5a458a055b23dfbbfed8a545dabf2aa/node_modules/nuxt/dist/app/composables/preview').usePreviewMode
   const useReducedMotion: typeof import('../../app/composables/useReducedMotion').useReducedMotion
   const useRequestEvent: typeof import('../../node_modules/.pnpm/nuxt@4.2.2_@parcel+watcher@2.5.4_@vue+compiler-sfc@3.5.27_cac@6.7.14_db0@0.3.4_ioredis@_e5a458a055b23dfbbfed8a545dabf2aa/node_modules/nuxt/dist/app/composables/ssr').useRequestEvent
@@ -306,6 +307,7 @@ declare module 'vue' {
     readonly useModel: UnwrapRef<typeof import('vue')['useModel']>
     readonly useNuxtApp: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@4.2.2_@parcel+watcher@2.5.4_@vue+compiler-sfc@3.5.27_cac@6.7.14_db0@0.3.4_ioredis@_e5a458a055b23dfbbfed8a545dabf2aa/node_modules/nuxt/dist/app/nuxt')['useNuxtApp']>
     readonly useNuxtData: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@4.2.2_@parcel+watcher@2.5.4_@vue+compiler-sfc@3.5.27_cac@6.7.14_db0@0.3.4_ioredis@_e5a458a055b23dfbbfed8a545dabf2aa/node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']>
+    readonly useNuxtDevTools: UnwrapRef<typeof import('../../node_modules/.pnpm/@nuxt+devtools@3.1.1_vite@7.3.1_jiti@2.6.1_lightningcss@1.30.2_terser@5.46.0_yaml@2.8.2__vue@3.5.27/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']>
     readonly usePreviewMode: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@4.2.2_@parcel+watcher@2.5.4_@vue+compiler-sfc@3.5.27_cac@6.7.14_db0@0.3.4_ioredis@_e5a458a055b23dfbbfed8a545dabf2aa/node_modules/nuxt/dist/app/composables/preview')['usePreviewMode']>
     readonly useReducedMotion: UnwrapRef<typeof import('../../app/composables/useReducedMotion')['useReducedMotion']>
     readonly useRequestEvent: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@4.2.2_@parcel+watcher@2.5.4_@vue+compiler-sfc@3.5.27_cac@6.7.14_db0@0.3.4_ioredis@_e5a458a055b23dfbbfed8a545dabf2aa/node_modules/nuxt/dist/app/composables/ssr')['useRequestEvent']>
