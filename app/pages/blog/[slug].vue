@@ -38,14 +38,8 @@
           </span>
         </div>
 
-        <article class="mt-20 max-w-3xl space-y-10">
-          <p
-            v-for="(p, idx) in post.body"
-            :key="idx"
-            class="text-neutral-400 font-light font-serif italic text-xl leading-relaxed"
-          >
-            {{ p }}
-          </p>
+        <article class="mt-20 max-w-3xl">
+          <div class="md-content" v-html="postHtml" />
         </article>
 
         <div class="mt-24 border-t border-white/10 pt-14">
@@ -65,6 +59,7 @@
 import { computed } from 'vue'
 import { blogPosts } from '~/data/content'
 import type { BlogPost } from '~/data/content'
+import MarkdownIt from 'markdown-it'
 
 const route = useRoute()
 
@@ -76,6 +71,20 @@ const post = computed<BlogPost>(() => {
   }
   return found
 })
+
+const md = new MarkdownIt({
+  html: false,
+  linkify: true,
+  typographer: true
+})
+
+const postMarkdown = computed(() => {
+  const body = post.value.body
+  if (!body) return ''
+  return Array.isArray(body) ? body.join('\n\n') : body
+})
+
+const postHtml = computed(() => md.render(postMarkdown.value))
 
 useHead({
   title: `${post.value.title} — ${post.value.category}`

@@ -140,3 +140,99 @@ body.cursor-none * {
     transition-duration: 1ms !important;
   }
 }
+
+/* Markdown content (blog posts) */
+.md-content {
+  color: rgb(163 163 163); /* neutral-400 */
+  font-family: "Playfair Display", ui-serif, Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.25rem; /* ~text-xl */
+  line-height: 1.75;
+}
+
+.md-content > * + * {
+  margin-top: 2.5rem;
+}
+
+.md-content h2,
+.md-content h3,
+.md-content h4 {
+  color: rgb(250 250 250);
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.md-content h2 {
+  font-size: 2rem;
+  margin-top: 4rem;
+}
+
+.md-content h3 {
+  font-size: 1.5rem;
+  margin-top: 3rem;
+}
+
+.md-content h4 {
+  font-size: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.md-content ul,
+.md-content ol {
+  padding-left: 1.25rem;
+}
+
+.md-content li {
+  margin-top: 0.75rem;
+}
+
+.md-content a {
+  color: rgb(250 250 250);
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.25);
+  text-underline-offset: 3px;
+}
+
+.md-content a:hover {
+  text-decoration-color: rgba(255, 255, 255, 0.6);
+}
+
+.md-content code {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-style: normal;
+  font-size: 0.95em;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.12rem 0.35rem;
+  border-radius: 0.35rem;
+}
+
+.md-content pre {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-style: normal;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.75rem;
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+}
+
+.md-content pre code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.md-content blockquote {
+  border-left: 2px solid rgba(255, 255, 255, 0.16);
+  padding-left: 1rem;
+  color: rgba(255, 255, 255, 0.65);
+}
