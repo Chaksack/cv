@@ -249,8 +249,62 @@ export const projects: ProjectCard[] = [
 ]
 
 export const blogPosts: BlogPost[] = [
-  {
+   {
     id: '01',
+    slug: 'modern-cloud-infrastructure-iac-strategy',
+    category: 'WRITING',
+    date: '2026',
+    title: 'Building a Modern Cloud Infrastructure: A Comprehensive IaC Strategy',
+    excerpt:
+      'A comprehensive approach to modern cloud architecture using Terraform, Docker, managed AWS services, GitOps with ArgoCD, and CI/CD with GitHub Actions.',
+    tags: ['IaC', 'Terraform', 'Docker', 'AWS', 'GitOps', 'ArgoCD', 'CI/CD', 'Kubernetes'],
+    body: [
+      "In today's fast-paced development landscape, automation and reliability aren't just nice to have—they're essential. After years of wrestling with manual deployments and configuration drift, our team developed a comprehensive strategy that brings together Infrastructure as Code, containerization, and GitOps principles to create a truly modern cloud architecture.",
+      '## Why Infrastructure as Code Matters',
+      'Gone are the days of clicking through AWS console wizards or SSH-ing into servers to make configuration changes. With Infrastructure as Code, we treat our infrastructure the same way we treat our application code: versioned, tested, and reproducible.',
+      '### Terraform: Our Foundation',
+      "We chose Terraform as our primary IaC tool, and it's been transformative. Using HashiCorp Configuration Language (HCL), we define everything declaratively—from VPCs and security groups to ECS clusters and RDS instances.",
+      "Our Terraform setup follows a modular approach. We've organized our code into reusable modules for common components like VPCs, ECS clusters, and RDS databases. This means we can spin up identical environments for development, staging, and production with confidence that they're truly identical.",
+      'To manage state safely, we use an S3 backend with DynamoDB locking. This prevents the nightmare scenario of two team members running `terraform apply` simultaneously and corrupting the state file. It\'s a simple setup that has saved us countless headaches.',
+      '## Containerization: Consistency Across Environments',
+      'Every application we build gets packaged into a Docker container. This gives us portability, consistency, and isolation—the holy trinity of modern application deployment.',
+      'We follow Docker best practices religiously: multi-stage builds keep our images lean, we never run as root, and we leverage official base images whenever possible. For local development, Docker Compose lets our developers run the entire stack on their laptops, mirroring production as closely as possible.',
+      'AWS Elastic Container Registry (ECR) serves as our private Docker registry. It integrates seamlessly with our CI/CD pipeline, and its security scanning features give us peace of mind about vulnerabilities.',
+      '## AWS Services: Standing on the Shoulders of Giants',
+      'Rather than reinventing the wheel, we leverage AWS managed services wherever it makes sense.',
+      '**ECS with Fargate** runs our containerized applications. By using Fargate\'s serverless compute, we\'ve eliminated the operational overhead of managing EC2 instances. Application Load Balancers handle traffic distribution and health checks, ensuring our services stay available.',
+      '**Amazon MQ** provides our RabbitMQ-compatible message broker, enabling event-driven architecture without the operational burden of managing RabbitMQ clusters ourselves.',
+      '**Amazon RDS for PostgreSQL** handles our relational data with automated backups, patching, and Multi-AZ deployments for high availability.',
+      '**ElastiCache for Redis** powers our caching layer, session management, and rate limiting—all without us having to worry about Redis cluster management.',
+      '## Kubernetes and GitOps: The Next Level',
+      'For our more complex microservices architectures, we turn to Kubernetes via AWS EKS. The ecosystem and flexibility are unmatched.',
+      '### Helm: Packaging Done Right',
+      'Helm charts let us package our Kubernetes applications in a way that\'s versioned, templated, and parameterized. Different environments use different `values.yaml` files, but the underlying chart remains the same. This consistency has been crucial for maintaining environment parity.',
+      '### ArgoCD: GitOps in Action',
+      'ArgoCD is where the magic happens. It implements true GitOps continuous delivery by automatically synchronizing our Git repository with our Kubernetes clusters. When we merge a pull request that updates a Helm chart, ArgoCD detects the change and applies it to the cluster.',
+      'The visibility ArgoCD provides is incredible. We can see at a glance which version of each application is running in each environment, whether it\'s in sync with Git, and whether it\'s healthy. No more guessing games.',
+      '## CI/CD with GitHub Actions',
+      'Our CI/CD pipeline is built entirely on GitHub Actions, and the workflows live right alongside our code in the `.github/workflows/` directory.',
+      'The build process is straightforward: lint, test, build Docker images, tag them with commit SHAs for traceability, and push to ECR. But the deployment process is where things get interesting.',
+      'Deployments to development happen automatically on every push to the `develop` branch. The workflow updates the Helm chart with the new image tag and triggers ArgoCD to sync.',
+      'Staging deployments require manual approval and happen when we merge to `main`. This gives us a chance to verify everything in an environment that mirrors production.',
+      'Production deployments are the most carefully controlled. They require multiple approvals and can leverage blue/green or canary strategies through ArgoCD. We\'ve even implemented automated rollback if health checks fail.',
+      'Secrets management is handled through GitHub Actions secrets, and we cache dependencies aggressively to keep build times reasonable.',
+      '## Staying Connected with Slack',
+      "Nobody wants to constantly check GitHub for pipeline status. We've integrated Slack notifications into every workflow, so the team gets real-time updates about builds, deployments, and failures.",
+      'When something goes wrong, the Slack message includes direct links to logs and the workflow run. This has dramatically reduced our time to resolution for deployment issues.',
+      '## The Results',
+      'Since implementing this strategy, we\'ve seen dramatic improvements:',
+      '- Deployment frequency has increased from weekly to multiple times per day\n- Mean time to recovery has dropped from hours to minutes\n- Environment drift is effectively eliminated\n- New team members can contribute to infrastructure changes with confidence\n- We can recreate entire environments from scratch in under an hour',
+      '## Final Thoughts',
+      "Building a modern cloud infrastructure isn't about adopting every new technology that comes along. It's about choosing the right tools for your needs and integrating them thoughtfully.",
+      'Infrastructure as Code with Terraform gives us consistency and version control. Docker containers provide portability. AWS managed services reduce operational overhead. Kubernetes and ArgoCD enable sophisticated deployment strategies. GitHub Actions automates everything. And Slack keeps everyone informed.',
+      'Together, these pieces create a system that\'s greater than the sum of its parts—a system that lets our team focus on building features instead of fighting infrastructure fires.',
+      "If you're still managing infrastructure manually, I encourage you to start small. Pick one piece—maybe containerize a single service, or define one environment in Terraform. The benefits compound quickly, and before long, you'll wonder how you ever managed without it."
+    ]
+  },
+  {
+    id: '02',
     slug: 'shipping-reliably-with-guardrails',
     category: 'WRITING',
     date: '2026',
@@ -301,7 +355,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-    id: '02',
+    id: '03',
     slug: 'infrastructure-as-product',
     category: 'NOTES',
     date: '2026',
@@ -350,7 +404,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-    id: '03',
+    id: '04',
     slug: 'observability-that-engineers-use',
     category: 'LEARNINGS',
     date: '2025',
