@@ -64,6 +64,11 @@ jobs:
           # For project pages, the site is served from /<repo>/.
           # For user/org pages (<owner>.github.io), it is served from /.
           NUXT_APP_BASE_URL: ${{ endsWith(github.repository, '.github.io') && '/' || format('/{0}/', github.event.repository.name) }}
+          # Used by the client-side copy alert plugin to detect unexpected deployments.
+          # Override via repo variable CANONICAL_HOST if you use a custom domain.
+          NUXT_PUBLIC_CANONICAL_HOST: ${{ vars.CANONICAL_HOST || format('{0}.github.io', github.repository_owner) }}
+          # Optional: set repo variable COPY_ALERT_WEBHOOK to receive alerts.
+          NUXT_PUBLIC_COPY_ALERT_WEBHOOK: ${{ vars.COPY_ALERT_WEBHOOK || '' }}
           NITRO_PRESET: github_pages
         run: pnpm run generate
 

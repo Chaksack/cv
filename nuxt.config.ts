@@ -3,6 +3,13 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
+  runtimeConfig: {
+    public: {
+      canonicalHost: process.env.NUXT_PUBLIC_CANONICAL_HOST || '',
+      copyAlertWebhook: process.env.NUXT_PUBLIC_COPY_ALERT_WEBHOOK || ''
+    }
+  },
+
   css: ['~/assets/css/main.css'],
 
   postcss: {
@@ -26,7 +33,9 @@ export default defineNuxtConfig({
       title: "Andrew Chakdahah - Technical Project Manager & DevSecOps Engineer",
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'color-scheme', content: 'dark' }
+        { name: 'color-scheme', content: 'dark' },
+        { name: 'author', content: 'Andrew Chakdahah' },
+        { name: 'copyright', content: '© 2026 Andrew Chakdahah. All rights reserved.' }
       ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },

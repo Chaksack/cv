@@ -234,7 +234,7 @@
           </div>
 
           <div class="text-neutral-500 font-mono text-[10px] tracking-[0.3em] uppercase text-center md:text-right">
-            © {{ content.footer.copyrightYear }} {{ content.footer.copyrightName }} — {{ content.footer.copyrightRole }}
+            © {{ content.footer.copyrightYear }} {{ content.footer.copyrightName }} — {{ content.footer.copyrightRole }}. All rights reserved.
           </div>
         </div>
       </div>
