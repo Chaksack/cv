@@ -125,7 +125,7 @@ achievements: [
   'Led end-to-end development of the GhostMark platform, owning technical architecture, delivery execution, and long-term product strategy.',
   'Defined product vision and roadmap, aligning engineering execution with business goals to increase market adoption and user satisfaction.',
 ],
-    tech: ['React', 'TypeScript', 'AWS', 'Terraform', 'Github Actions', 'Node.js', 'Prometheus', 'Grafana', 'Docker'],
+    tech: ['React', 'Next.js', 'TypeScript', 'AWS', 'Terraform', 'Github Actions', 'Node.js', 'Prometheus', 'Grafana', 'Docker', 'Slack Api'],
     link: 'https://ghostmarkstudio.com/'
   },
   {
@@ -137,7 +137,7 @@ achievements: [
 'Defined product vision and strategy, increasing market share and user satisfaction.',
 'Managed product lifecycle, ensuring timely delivery and alignment with business objectives.',
     ],
-    tech: ['Google Workspace', 'Go', 'TypeScript', 'Storybook','Github', 'Prometheus', 'Grafana', 'AWS', 'Docker', 'Postman', 'Figma', 'Jira', 'Slack'],
+    tech: ['Google Workspace', 'Go', 'TypeScript', 'Next.js', 'Cypress','Github', 'Prometheus', 'Grafana', 'AWS', 'Docker', 'Postman', 'Figma', 'Jira', 'Slack'],
     link: 'https://syentia.io/'
   },
   // {
@@ -159,7 +159,7 @@ achievements: [
     achievements: [
       'Designed and implemented secure CI/CD pipelines using GitHub Actions, integrating automated security scans (SAST, dependency and container scanning) into the delivery lifecycle.',
     ],
-    tech: ['Go', 'Yaml', 'Kubernetes', 'Github Actions', 'AWS', 'Terraform', 'SonaQube', 'ArgoCD', 'Lens', 'Helm','Docker','Trivy', 'TF-sec'],
+    tech: ['Go', 'Yaml', 'Kubernetes', 'Github Actions', 'AWS', 'Terraform', 'SonaQube', 'ArgoCD', 'Lens', 'Helm','Docker','Trivy', 'TF-sec', 'Slack Api'],
     link: 'https://nylabank.com/'
   }
 ]
@@ -176,7 +176,7 @@ export const experienceAdvisory: ExperienceRow[] = [
 'Authored SDLC and SRD documentation.',
 
     ],
-    tech: ['Microsoft 365', 'Technical Writing', 'Quality Assurance', 'Project Management'],
+    tech: ['Microsoft 365', 'Technical Writing', 'Quality Assurance', 'Project Management', 'Cloud Solutions'],
     link: 'https://www.leanicontechnology.com/'
   },
   {
@@ -189,7 +189,7 @@ export const experienceAdvisory: ExperienceRow[] = [
       'Compiled research and wrote comprehensive SDLC and SRD.',
       'Guided Software development in technical challenges.'
     ],
-    tech: ['Frontend Architecture', 'Technical Writing'],
+    tech: ['Product Development', 'Product Management', 'Technical Writing'],
     link: 'https://www.smashingmagazine.com/'
   }
 ]
@@ -201,7 +201,7 @@ export const projects: ProjectCard[] = [
     year: '2025',
     title: 'Ulee Home',
     description: 'An ecommerce platform for scented candles and home fragrances.',
-    tech: ['React', 'TypeScript', 'Next.js', 'AWS', 'Resend', 'Medusa', 'Tailwind CSS', 'ShipStation'],
+    tech: ['React', 'TypeScript', 'Next.js', 'Railway', 'Resend', 'Medusa', 'Tailwind CSS', 'ShipStation'],
     link: 'https://uleehome.com/'
   },
   {
