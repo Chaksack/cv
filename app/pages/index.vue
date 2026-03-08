@@ -77,7 +77,7 @@
     </section>
 
     <section id="about" class="relative bg-black px-6 md:px-16">
-      <div class="w-full max-w-3xl mx-auto py-40 md:py-60">
+      <div class="w-full max-w-3xl mx-auto py-14 md:py-24">
         <SectionHeading :kicker="content.about.headingNumber" :aside="undefined">
           {{ content.about.headingTitle }}
         </SectionHeading>
@@ -95,7 +95,7 @@
     </section>
 
     <div id="experience" ref="expRoot" class="relative bg-black h-screen w-full overflow-hidden experience-bg reveal-trigger">
-      <div ref="expTrack" class="flex px-16 md:px-40 h-full items-center will-change-transform gap-20 relative z-10">
+      <div ref="expTrack" class="flex px-16 md:px-40 h-full items-center will-change-transform gap-14 relative z-10">
         <div class="w-[80vw] md:w-[40vw] shrink-0 flex items-center relative h-full">
           <div class="max-w-md z-30 relative">
             <SectionHeading :kicker="content.experience.headingNumber" :aside="undefined">
@@ -125,7 +125,7 @@
     </div>
 
     <div id="advisory" ref="advisoryRoot" class="relative bg-black h-screen w-full overflow-hidden reveal-trigger">
-      <div ref="advisoryTrack" class="flex px-16 md:px-40 h-full items-center will-change-transform gap-20 relative z-10">
+      <div ref="advisoryTrack" class="flex px-16 md:px-40 h-full items-center will-change-transform gap-14 relative z-10">
         <div class="w-[80vw] md:w-[40vw] shrink-0 flex items-center relative h-full">
           <div class="max-w-md z-30 relative">
             <SectionHeading :kicker="content.advisory.headingNumber" :aside="undefined">
@@ -149,6 +149,112 @@
         >
           <div class="h-full flex items-center">
             <ExperienceCard :row="row" :index="formatIndex(idx)" @hover="setHover" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="skills" ref="skillsRoot" class="relative bg-black h-screen w-full overflow-hidden reveal-trigger">
+      <div ref="skillsTrack" class="flex px-16 md:px-40 h-full items-center will-change-transform gap-14 relative z-10">
+        <div class="w-[80vw] md:w-[40vw] shrink-0 flex items-center relative h-full">
+          <div class="max-w-md z-30 relative">
+            <SectionHeading :kicker="content.skills.headingNumber" :aside="undefined">
+              {{ content.skills.headingTitle }}
+            </SectionHeading>
+            <p class="text-neutral-500 font-light font-serif italic text-xl mt-8 leading-relaxed">
+              {{ content.skills.intro }}
+            </p>
+            <div class="mt-12 w-24 h-px bg-white/20" />
+          </div>
+        </div>
+
+        <div
+          v-for="(cat, idx) in content.skills.categories"
+          :key="cat.label"
+          class="w-[90vw] md:w-[70vw] h-full shrink-0"
+        >
+          <div class="h-full flex items-center">
+            <div class="relative border-l border-white/10 pl-8 md:pl-20 py-10 md:py-12 w-full">
+              <div
+                class="absolute -left-10 md:-left-16 top-10 font-serif italic text-7xl md:text-[8vw] text-white/5 font-bold leading-none pointer-events-none select-none"
+              >
+                {{ formatIndex(idx) }}
+              </div>
+
+              <div class="flex items-center gap-4 md:gap-6 mb-6 md:mb-10">
+                <span class="font-mono text-[9px] md:text-[10px] text-neutral-500 tracking-[0.6em] uppercase font-bold">
+                  Skills
+                </span>
+                <div class="h-px w-8 md:w-16 bg-neutral-800" />
+                <span class="font-mono text-[9px] md:text-[10px] text-neutral-600 italic tracking-[0.2em] uppercase">
+                  {{ cat.items.length }}
+                </span>
+              </div>
+
+              <h3 class="text-7xl md:text-[5vw] font-serif font-bold italic tracking-tighter leading-[0.9] text-white">
+                {{ cat.label }}
+              </h3>
+
+              <div class="mt-12 flex flex-wrap gap-2">
+                <span
+                  v-for="t in cat.items"
+                  :key="t"
+                  class="font-mono text-[9px] border border-white/10 px-4 py-2 rounded bg-black/50 text-neutral-500 uppercase tracking-[0.2em] font-bold text-white/50"
+                >
+                  {{ t }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="services" ref="servicesRoot" class="relative bg-black h-screen w-full overflow-hidden reveal-trigger">
+      <div ref="servicesTrack" class="flex px-16 md:px-40 h-full items-center will-change-transform gap-20 relative z-10">
+        <div class="w-[80vw] md:w-[40vw] shrink-0 flex items-center relative h-full">
+          <div class="max-w-md z-30 relative">
+            <SectionHeading :kicker="content.services.headingNumber" :aside="undefined">
+              {{ content.services.headingTitle }}
+            </SectionHeading>
+            <p class="text-neutral-500 font-light font-serif italic text-xl mt-8 leading-relaxed">
+              {{ content.services.intro }}
+            </p>
+            <div class="mt-12 w-24 h-px bg-white/20" />
+          </div>
+        </div>
+
+        <div
+          v-for="(service, idx) in content.services.items"
+          :key="service.title"
+          class="w-[90vw] md:w-[70vw] h-full shrink-0"
+        >
+          <div class="h-full flex items-center">
+            <div class="relative border-l border-white/10 pl-8 md:pl-20 py-10 md:py-12 w-full">
+              <div
+                class="absolute -left-10 md:-left-16 top-10 font-serif italic text-7xl md:text-[8vw] text-white/5 font-bold leading-none pointer-events-none select-none"
+              >
+                {{ formatIndex(idx) }}
+              </div>
+
+              <h3 class="text-7xl md:text-[5vw] font-serif font-bold italic tracking-tighter leading-[0.9] text-white">
+                {{ service.title }}
+              </h3>
+
+              <p class="text-neutral-500 font-light font-serif italic text-xl mt-8 leading-relaxed max-w-2xl">
+                {{ service.description }}
+              </p>
+
+              <div v-if="service.tags?.length" class="mt-12 flex flex-wrap gap-2">
+                <span
+                  v-for="t in service.tags"
+                  :key="t"
+                  class="font-mono text-[9px] border border-white/10 px-4 py-2 rounded bg-black/50 text-neutral-500 uppercase tracking-[0.2em] font-bold text-white/50"
+                >
+                  {{ t }}
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -265,6 +371,12 @@ const expTrack = ref<HTMLDivElement | null>(null)
 
 const advisoryRoot = ref<HTMLDivElement | null>(null)
 const advisoryTrack = ref<HTMLDivElement | null>(null)
+
+const skillsRoot = ref<HTMLDivElement | null>(null)
+const skillsTrack = ref<HTMLDivElement | null>(null)
+
+const servicesRoot = ref<HTMLDivElement | null>(null)
+const servicesTrack = ref<HTMLDivElement | null>(null)
 
 const projectsRoot = ref<HTMLDivElement | null>(null)
 const projectsTrack = ref<HTMLDivElement | null>(null)
@@ -399,6 +511,18 @@ onMounted(() => {
     const advisoryTrackEl = advisoryTrack.value
     if (advisoryRootEl && advisoryTrackEl) {
       setupPinnedHorizontal(advisoryRootEl, advisoryTrackEl, 'advisory-scroll')
+    }
+
+    const skillsRootEl = skillsRoot.value
+    const skillsTrackEl = skillsTrack.value
+    if (skillsRootEl && skillsTrackEl) {
+      setupPinnedHorizontal(skillsRootEl, skillsTrackEl, 'skills-scroll')
+    }
+
+    const servicesRootEl = servicesRoot.value
+    const servicesTrackEl = servicesTrack.value
+    if (servicesRootEl && servicesTrackEl) {
+      setupPinnedHorizontal(servicesRootEl, servicesTrackEl, 'services-scroll')
     }
 
     const projectsRootEl = projectsRoot.value

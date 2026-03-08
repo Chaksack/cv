@@ -14,6 +14,8 @@ export const content = {
     { label: 'About', id: 'about' },
     { label: 'Experience', id: 'experience' },
     { label: 'Advisory', id: 'advisory' },
+    { label: 'Skills', id: 'skills' },
+    { label: 'Services', id: 'services' },
     { label: 'Projects', id: 'projects' },
     { label: 'Blog', id: 'blog' }
   ],
@@ -50,8 +52,80 @@ export const content = {
     startLabel: 'Genesis',
     endLabel: 'Apex'
   },
-  projects: {
+  skills: {
     headingNumber: '04',
+    headingTitle: 'Tech Skills',
+    intro: 'A toolkit for building, shipping, and operating reliable systems.',
+    categories: [
+      {
+        label: 'Cloud & Infrastructure',
+        items: ['AWS', 'Terraform', 'Kubernetes', 'Helm', 'Docker']
+      },
+      {
+        label: 'CI/CD & Delivery',
+        items: ['GitHub Actions', 'ArgoCD', 'GitOps', 'Jenkins']
+      },
+      {
+        label: 'Security',
+        items: ['Trivy', 'TF-sec', 'SonarQube']
+      },
+      {
+        label: 'Observability',
+        items: ['Prometheus', 'Grafana', 'OpenTelemetry', 'Sentry', 'CloudWatch']
+      },
+      {
+        label: 'Backend',
+        items: ['Go', 'Express.js', 'Node.js', 'NoSQL', 'SQL', 'PostgreSQL', 'Gofiber']
+      },
+      {
+        label: 'Frontend',
+        items: ['TypeScript', 'Vue', 'Nuxt', 'React', 'Next.js', 'Tailwind CSS']
+      },
+      {
+        label: 'Product & Collaboration',
+        items: ['Jira', 'Teams','Figma', 'Slack', 'Technical Writing', 'Postman']
+      }
+    ]
+  },
+  services: {
+    headingNumber: '05',
+    headingTitle: 'Services',
+    intro: 'Engagements designed to ship outcomes — not just outputs.',
+    items: [
+      {
+        title: 'Digital Product Development',
+        description:
+          'Product discovery-to-delivery: requirements, roadmap, architecture direction, and execution oversight to ship measurable outcomes.',
+        tags: ['Product Strategy', 'Roadmapping', 'Delivery', 'MVP Launch']
+      },
+      {
+        title: 'Web Application Development',
+        description:
+          'Design and build modern web applications with clean UX, strong performance, and production-ready deployment practices.',
+        tags: ['User Experience', 'Performance', 'Maintainability', 'Production Ready']
+      },
+      {
+        title: 'Mobile App Development',
+        description:
+          'Build and ship mobile applications with reliable releases, analytics-ready instrumentation, and maintainable delivery pipelines.',
+        tags: ['Release Readiness', 'Instrumentation', 'Quality', 'Iteration']
+      },
+      {
+        title: 'DevSecOps & IAC',
+        description:
+          'Secure CI/CD, infrastructure as code, and Kubernetes operations with guardrails for repeatable, compliant delivery.',
+        tags: ['Automation', 'Secure Delivery', 'Compliance', 'Repeatability']
+      },
+      {
+        title: 'Cloud Consultation',
+        description:
+          'Cloud reviews and guidance on architecture, reliability, costs, and delivery practices — focused on practical next steps.',
+        tags: ['Architecture Review', 'Reliability', 'Cost Optimization', 'Action Plan']
+      }
+    ]
+  },
+  projects: {
+    headingNumber: '06',
     headingTitle: 'Artifacts',
     intro:
       'Selected engineering projects. High-impact features, pioneer in region, and AI integrations.',
@@ -59,7 +133,7 @@ export const content = {
     endLabel: 'Apex'
   },
   blog: {
-    headingNumber: '05',
+    headingNumber: '07',
     headingTitle: 'Blog',
     intro: 'Writing on product delivery, DevSecOps, and building resilient systems.',
     startLabel: 'Genesis',
