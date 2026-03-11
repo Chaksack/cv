@@ -272,6 +272,24 @@ export const projects: ProjectCard[] = [
   {
     id: '01',
     category: 'Ecommerce',
+    year: '2026',
+    title: 'BagUps',
+    description: 'An ecommerce platform focused on the sale of biodegradable trash bags.',
+    tech: ['Liquid', 'Shopify'],
+    link: 'https://bagups.com/'
+  },
+  {
+    id: '02',
+    category: 'Ecommerce',
+    year: '2025',
+    title: 'Price Drop',
+    description: 'An ecommerce platform focused on the Buy Now Pay Later model.',
+    tech: ['React', 'TypeScript', 'Next.js', 'Railway', 'Resend', 'Medusa', 'Tailwind CSS', 'Paystack'],
+    link: 'https://pricedropgh.com/'
+  },
+  {
+    id: '03',
+    category: 'Ecommerce',
     year: '2025',
     title: 'Ulee Home',
     description: 'An ecommerce platform for scented candles and home fragrances.',
@@ -279,7 +297,7 @@ export const projects: ProjectCard[] = [
     link: 'https://uleehome.com/'
   },
   {
-    id: '02',
+    id: '04',
     category: 'AI',
     year: '2025',
     title: 'Bible AI',
@@ -289,7 +307,7 @@ export const projects: ProjectCard[] = [
     link: 'https://bibleai.com/'
   },
   {
-    id: '03',
+    id: '06',
     category: 'Application Monitoring',
     year: '2024',
     title: 'Nada',
@@ -299,7 +317,7 @@ export const projects: ProjectCard[] = [
     link: 'https://nada-chi.vercel.app/'
   },
   {
-    id: '04',
+    id: '07',
     category: 'Education',
     year: '2024',
     title: 'Montessori World Connect',
@@ -310,7 +328,7 @@ export const projects: ProjectCard[] = [
 
   },
   {
-    id: '05',
+    id: '08',
     category: 'Logistics',
     year: '2024',
     title: 'GoTruck',
@@ -318,8 +336,30 @@ export const projects: ProjectCard[] = [
       'A logistics management platform for real-time tracking and efficient fleet operations. Also helps customer order truck services seamlessly.',
     tech: ['Vue', 'Nuxt', 'TypeScript', 'Go', 'Mapbox', 'PostgreSQL','Gofiber'],
         link: 'https://logistics-one-khaki.vercel.app/'
+  },
+  {
+    id: '09',
+    category: 'Finance',
+    year: '2023',
+    title: 'Instabusiness',
+    description:
+      'A loan organisation application helping SMEs get capital to operate.',
+    tech: ['Vue', 'Nuxt', 'TypeScript', 'Go', 'Django', 'Python', 'PostgreSQL','Gofiber'],
+        link: 'https://instabusinessgh.com/'
 
-  }
+  },
+   {
+    id: '10',
+    category: 'Insurance',
+    year: '2022',
+    title: 'Kach',
+    description:
+      'An insurance platform providing comprehensive coverage options for individuals and businesses.',
+    tech: ['Vue', 'Nuxt', 'TypeScript', 'Java', 'Spring Boot', 'PostgreSQL', 'Flutter'],
+        link: 'https://kach.com/'
+
+  },
+
 ]
 
 export const blogPosts: BlogPost[] = [
