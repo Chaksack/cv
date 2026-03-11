@@ -344,7 +344,7 @@ export const projects: ProjectCard[] = [
     title: 'Instabusiness',
     description:
       'A loan organisation application helping SMEs get capital to operate.',
-    tech: ['Vue', 'Nuxt', 'TypeScript', 'Go', 'Django', 'Python', 'PostgreSQL','Gofiber'],
+    tech: ['Vue', 'Nuxt', 'TypeScript', 'Go', 'Django', 'Python', 'PostgreSQL','Gofiber', 'USSD'],
         link: 'https://instabusinessgh.com/'
 
   },
